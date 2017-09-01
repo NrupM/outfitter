@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index', as: 'users'
 
   get '/items', to: 'items#index', as: 'items'
+
+  get '/outfits', to: 'outfits#index', as: 'outfits'
+
 end
