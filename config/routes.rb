@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   patch '/items/:id', to: 'items#update' #
   delete '/items/:id', to: 'items#destroy' #
 
-
   get '/outfits', to: 'outfits#index', as: 'outfits' #index.html.erb
   get '/outfits/new', to: 'outfits#new', as: "new_outfit" #new.html.erb
   post '/outfits', to: 'outfits#create' #
