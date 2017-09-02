@@ -9,9 +9,20 @@ User.delete_all
 Item.delete_all
 Outfit.delete_all
 
-User.create({first_name: 'John', last_name: 'Smith', password_digest: '1', username: 'johnsmithuser', email: 'johnsmithuser@gmail.com' })
-Item.create({name: 'favorite sweatshirt', brand: 'louis', category: 'shirt'})
-Outfit.create({name: 'casual friday', tag: 'casual'})
+
+Outfit.create([
+  {name: 'casual friday', tag: 'casual'},
+  {name: 'serious business', tag: 'dressy'},
+  {name: 'weekend', tag: 'casual'}
+  ])
+
+Item.create([
+  {name: 'favorite grey button-down', brand: 'louis vutton', category: 'shirt'},
+  {name: 'blue distressed jeans', brand: 'seven', category: 'pants'}
+])
+
+# User.create({first_name: 'John', last_name: 'Smith', password_digest: '1', username: 'johnsmithuser', email: 'johnsmithuser@gmail.com' })
+
 p Item.all
 p User.all
 p Outfit.all
