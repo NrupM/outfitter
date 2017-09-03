@@ -4,6 +4,7 @@ class OutfitsController < ApplicationController
   end
 
   def new
+    @outfit = Outfit.new
   end
 
   def create
