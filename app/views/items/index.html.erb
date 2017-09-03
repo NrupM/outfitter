@@ -1,7 +1,9 @@
 <% @items.each do |item| %>
   <p>
-    <strong>Name:</strong> <%= item.name %>
+    <strong>id:</strong> <%= item.id %><br>
+    <strong>Name:</strong> <%= item.name %><br>
     <strong>Brand:</strong> <%= item.brand %><br>
-    <strong>Category:</strong> <%= item.category %>
+    <strong>Category:</strong> <%= item.category %><br>
+    <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
   </p>
 <% end %>

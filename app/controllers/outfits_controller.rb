@@ -29,6 +29,7 @@ class OutfitsController < ApplicationController
   end
 
   def destroy
+
   end
 
   private

@@ -9,3 +9,5 @@
   <%= f.text_field :category, value: "", placeholder: "Enter new Category" %><br>
   <%= f.submit "Update Item" %>
 <% end %>
+<br><br><br><br>
+<%= button_to "Delete Item", { action: "destroy", id: @item.id }, method: :delete %>

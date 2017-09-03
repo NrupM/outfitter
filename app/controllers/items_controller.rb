@@ -29,6 +29,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    item = Item.find_by_id(params[:id])
+    item.delete
+    redirect_to items_path
   end
 
   private
