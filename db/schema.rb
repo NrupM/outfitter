@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170902170323) do
+ActiveRecord::Schema.define(version: 20170903225355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,7 @@ ActiveRecord::Schema.define(version: 20170902170323) do
     t.string "brand"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.string "category"
-    t.bigint "outfit_id"
-    t.index ["outfit_id"], name: "index_items_on_outfit_id"
-    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "outfits", force: :cascade do |t|
@@ -32,13 +28,6 @@ ActiveRecord::Schema.define(version: 20170902170323) do
     t.string "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_outfits_on_user_id"
-  end
-
-  create_table "pieces", id: false, force: :cascade do |t|
-    t.integer "item_id"
-    t.integer "outfit_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,7 +40,4 @@ ActiveRecord::Schema.define(version: 20170902170323) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "items", "outfits"
-  add_foreign_key "items", "users"
-  add_foreign_key "outfits", "users"
 end
