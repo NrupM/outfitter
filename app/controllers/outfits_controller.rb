@@ -19,6 +19,7 @@ class OutfitsController < ApplicationController
   end
 
   def edit
+    @outfit = Outfit.find_by_id(params[:id])
   end
 
   def update
