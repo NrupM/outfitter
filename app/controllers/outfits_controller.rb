@@ -23,6 +23,9 @@ class OutfitsController < ApplicationController
   end
 
   def update
+    outfit = Outfit.find_by_id(params[:id])
+    outfit.update_attributes(outfit_params)
+    redirect_to outfit_path(outfit)
   end
 
   def destroy
