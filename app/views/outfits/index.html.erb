@@ -1,1 +1,7 @@
 <h1>get all outfits </h1>
+<% @outfits.each do |outfit| %>
+<p>
+  <strong>Name:</strong> <%= outfit.name %>
+  <strong>Tag:</strong> <%= outfit.tag %>
+</p>
+<% end %>

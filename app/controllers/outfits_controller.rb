@@ -10,6 +10,7 @@ class OutfitsController < ApplicationController
   end
 
   def show
+    @outfit = Outfit.find_by_id(params[:id])
   end
 
   def edit
@@ -20,5 +21,5 @@ class OutfitsController < ApplicationController
 
   def destroy
   end
-  
+
 end
