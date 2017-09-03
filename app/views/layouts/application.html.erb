@@ -3,12 +3,16 @@
   <head>
     <title>Outfitter</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= link_to "All Items", items_path %>
+    <%= link_to "New Item", new_item_path %>
+    <%= link_to "All Outfits", outfits_path %>
+    <%= link_to "New Outfit", new_outfit_path %>
+    
     <%= yield %>
   </body>
 </html>

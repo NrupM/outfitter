@@ -1,1 +1,8 @@
-<h1>new item form</h1>
+<h1>new ITEM form</h1>
+
+<%= form_for @item do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :brand, placeholder: "Brand" %>
+  <%= f.text_field :category, placeholder: "Category" %>
+  <%= f.submit "Add item" %>
+<% end %>
