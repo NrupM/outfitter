@@ -7,3 +7,5 @@
   <%= f.text_field :tag, value: "", placeholder: "Enter new Tag" %><br>
   <%= f.submit "Update Outfit" %>
 <% end %>
+<br><br><br><br>
+<%= button_to "Delete Outfit", { action: "destroy", id: @outfit.id }, method: "delete" %>

@@ -29,7 +29,9 @@ class OutfitsController < ApplicationController
   end
 
   def destroy
-
+    outfit = Outfit.find_by_id(params[:id])
+    outfit.delete
+    redirect_to outfits_path
   end
 
   private
