@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   get '/users', to: 'users#index', as: 'users' #index.html.erb
-  get '/users/new', to: 'users#new', as: "new_user" #new.html.erb
+  get '/users/new', to: 'users#new', as: 'new_user' #new.html.erb
   post '/users', to: 'users#create' #
   get '/users/:id', to: 'users#show', as: 'user' #show.html.erb
   get '/users/:id/edit', to: 'users#edit', as: 'edit_user' #edit.html.erb
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#destroy' #
 
   get '/items', to: 'items#index', as: 'items' #index.html.erb
-  get '/items/new', to: 'items#new', as: "new_item" #new.html.erb
+  get '/items/new', to: 'items#new', as: 'new_item' #new.html.erb
   post '/items', to: 'items#create' #
   get '/items/:id', to: 'items#show', as: 'item' #show.html.erb
   get '/items/:id/edit', to: 'items#edit', as: 'edit_item' #edit.html.erb
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   delete '/items/:id', to: 'items#destroy' #
 
   get '/outfits', to: 'outfits#index', as: 'outfits' #index.html.erb
-  get '/outfits/new', to: 'outfits#new', as: "new_outfit" #new.html.erb
+  get '/outfits/new', to: 'outfits#new', as: 'new_outfit' #new.html.erb
   post '/outfits', to: 'outfits#create' #
   get '/outfits/:id', to: 'outfits#show', as: 'outfit' #show.html.erb
   get '/outfits/:id/edit', to: 'outfits#edit', as: 'edit_outfit' #edit.html.erb
