@@ -8,6 +8,10 @@ class ItemsController < ApplicationController
   end
 
   def create
+    item = Item.create(item_params)
+    if item.save
+      redirect_to item_path(item)
+    end
   end
 
   def show
@@ -22,4 +26,11 @@ class ItemsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def item_params
+    item_params = params.require(:item).permit(:name, :brand, :category)
+  end
+
 end
