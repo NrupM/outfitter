@@ -1,10 +1,6 @@
-<% @items.each do |item| %>
-  <p>
-    <strong>id:</strong> <%= item.id %><br>
-    <strong>Name:</strong> <%= item.name %><br>
-    <strong>Brand:</strong> <%= item.brand %><br>
-    <strong>Category:</strong> <%= item.category %><br>
-    <%= image_tag item.image.url(:medium) %><br>
-    <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
-  </p>
-<% end %>
+<%= render "shared/header" %>
+<!-- main container -->
+<%= render "shared/closet" %>
+<%= render "shared/builder" %>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row main">
+        <div class="col s12 m4 sidebar">
+          <div class="title valign-wrapper">
+                <span>my items</span>
+            </div>
+          <div class="add-item-btn right-align">
+                <a class="red btn add-item"><i class="material-icons">add_to_photos</i></a>
+            </div>
+
+            <div class="right-align">
+            <a href="http://localhost:3000/items/new" class="btn-floating fab btn-xs waves-effect waves-light right-align amber"><i class="material-icons">add</i></a>
+            </div>
+            <a href="http://localhost:3000/items/new"><i class="material-icons"></i><span>add new items</span></a>
+            <span class="btn right-align">+</span>
+            <div class="row">
+                <div class="clothing-type-title">
+                    <p>shirts</p>
+                </div>
+                <div class="divider"></div>
+                <div class="horizontal">
+                    <div class="clothing-type">
+                      <% @items.each do |item| %>
+                      <div class="col s12 m4">
+                          <div class="item">
+                            <%= image_tag item.image.url(:medium) %><br>
+                            <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                          </div>
+                      </div>
+                      <% end %>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clothing-type-title">
+                    <p>pants</p>
+                </div>
+                <div class="divider"></div>
+                <div class="horizontal">
+                    <div class="clothing-type">
+                      <% @items.each do |item| %>
+                      <div class="col s12 m4">
+                          <div class="item">
+                            <%= image_tag item.image.url(:medium) %><br>
+                            <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                          </div>
+                      </div>
+                      <% end %>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clothing-type-title">
+                    <p>shoes</p>
+                </div>
+                <div class="divider"></div>
+                <div class="horizontal">
+                    <div class="clothing-type">
+                      <% @items.each do |item| %>
+                      <div class="col s12 m4">
+                          <div class="item">
+                            <%= image_tag item.image.url(:medium) %><br>
+                            <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                          </div>
+                      </div>
+                      <% end %>
+                    </div>
+                </div>
+
+            </div>
+        </div>
