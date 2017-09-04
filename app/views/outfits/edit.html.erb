@@ -1,1 +1,11 @@
-<h1>edit an oufit by id!</h1>
+<h1>EDIT an oufit by id!</h1>
+
+<%= form_for @outfit do |f| %>
+  <label> <%= @outfit.name %> </label> <br>
+  <%= f.text_field :name, value: "", placeholder: "Enter new Name" %><br>
+  <label> <%= @outfit.tag %> </label><br>
+  <%= f.text_field :tag, value: "", placeholder: "Enter new Tag" %><br>
+  <%= f.submit "Update Outfit" %>
+<% end %>
+<br><br><br><br>
+<%= button_to "Delete Outfit", { action: "destroy", id: @outfit.id }, method: "delete" %>

@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
     create_table :items do |t|
       t.string :name
       t.string :brand
-      t.string :type
+      t.string :category
 
       t.timestamps
     end

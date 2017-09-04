@@ -1,3 +1,4 @@
 class Item < ApplicationRecord
-  belongs_to :outfit, optional: true
+  has_many :outfit_items, dependent: :destroy
+  has_many :outfits, through: :outfit_items
 end

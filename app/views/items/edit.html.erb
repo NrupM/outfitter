@@ -1,1 +1,13 @@
-<h1>edit one item form</h1>
+<h1>EDIT one item form</h1>
+
+<%= form_for @item do |f| %>
+  <label> <%= @item.name %> </label> <br>
+  <%= f.text_field :name, value: "", placeholder: "Enter new Name" %><br>
+  <label> <%= @item.brand %> </label><br>
+  <%= f.text_field :brand, value: "", placeholder: "Enter new Brand" %><br>
+  <label> <%= @item.category %> </label><br>
+  <%= f.text_field :category, value: "", placeholder: "Enter new Category" %><br>
+  <%= f.submit "Update Item" %>
+<% end %>
+<br><br><br><br>
+<%= button_to "Delete Item", { action: "destroy", id: @item.id }, method: :delete %>

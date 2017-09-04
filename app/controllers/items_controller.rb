@@ -19,12 +19,19 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item = Item.find_by_id(params[:id])
   end
 
   def update
+    item = Item.find_by_id(params[:id])
+    item.update_attributes(item_params)
+    redirect_to item_path(item)
   end
 
   def destroy
+    item = Item.find_by_id(params[:id])
+    item.delete
+    redirect_to items_path
   end
 
   private
