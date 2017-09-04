@@ -3,4 +3,6 @@
   <strong>Name:</strong> <%= @item.name %>
   <strong>Brand:</strong> <%= @item.brand %><br>
   <strong>Category:</strong> <%= @item.category %>
+  <%= image_tag @item.image.url(:large) %>
+
 </p>

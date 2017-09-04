@@ -7,6 +7,8 @@
   <%= f.text_field :brand, value: "", placeholder: "Enter new Brand" %><br>
   <label> <%= @item.category %> </label><br>
   <%= f.text_field :category, value: "", placeholder: "Enter new Category" %><br>
+  <%= image_tag @item.image.url(:large) %>
+  <%= f.file_field :image %><br>
   <%= f.submit "Update Item" %>
 <% end %>
 <br><br><br><br>
