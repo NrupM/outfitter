@@ -16,21 +16,21 @@ Outfit.create([
 ])
 
 casual_friday_items = Item.create([
-  {name: 'favorite grey button-down', brand: 'Louis Vutton', category: 'shirt', image: File.new("app/assets/images/pants_black_slacks.jpeg")},
-  {name: 'blue distressed jeans', brand: 'seven', category: 'pants'},
-  {name: 'brown loafers', brand: 'Aldo', category: 'shoes'}
+  {name: 'favorite grey button-down', brand: 'Louis Vutton', category: 'shirt', image: File.new("app/assets/images/shirt_grey.jpg")},
+  {name: 'dark blue jeans', brand: 'seven', category: 'pants', image: File.new("app/assets/images/pants_dark_jeans.png")},
+  {name: 'black boots', brand: 'Aldo', category: 'shoes', image: File.new("app/assets/images/shoes_black_boots.png")}
 ])
 
 serious_business_items = Item.create([
-  {name: 'white dress shirt', brand: 'Hugo Boss', category: 'shirt'},
-  {name: 'black slacks', brand: 'Armani', category: 'pants'},
-  {name: 'black oxfords', brand: 'Aldo', category: 'shoes'}
+  {name: 'white dress shirt', brand: 'Hugo Boss', category: 'shirt', image: File.new("app/assets/images/shirt_hugo-boss.jpg")},
+  {name: 'black slacks', brand: 'Armani', category: 'pants', image: File.new("app/assets/images/pants_black_slacks.jpeg")},
+  {name: 'black oxfords', brand: 'Aldo', category: 'shoes', image: File.new("app/assets/images/shoes_black_oxfords.jpg")}
 ])
 
 weekend = Item.create([
-  {name: 'green t-shirt', brand: 'Banana Republic', category: 'shirt'},
-  {name: 'light blue jeans', brand: "Levi's", category: 'pants'},
-  {name: 'favorite sneakers', brand: 'New Balance', category: 'shoes'}
+  {name: 'green t-shirt', brand: 'Banana Republic', category: 'shirt', image: File.new("app/assets/images/shirt_green-tshirt.jpg")},
+  {name: 'light blue jeans', brand: "Levi's", category: 'pants', image: File.new("app/assets/images/pants_jeans_levis.jpeg")},
+  {name: 'favorite sneakers', brand: 'New Balance', category: 'shoes', image: File.new("app/assets/images/shoes_new_balance.jpg")}
 ])
 
 outfit = Outfit.find_by_id(1)
@@ -47,8 +47,6 @@ outfit = Outfit.find_by_id(3)
 weekend.each do |item|
   outfit.items << item
 end
-
-
 
 
 # User.create({first_name: 'John', last_name: 'Smith', password_digest: '1', username: 'johnsmithuser', email: 'johnsmithuser@gmail.com' })

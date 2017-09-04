@@ -2,11 +2,11 @@
 
 <%= form_for @item do |f| %>
   <label> <%= @item.name %> </label> <br>
-  <%= f.text_field :name, value: "", placeholder: "Enter new Name" %><br>
+  <%= f.text_field :name, value: @item.name, placeholder: "Enter new Name" %><br>
   <label> <%= @item.brand %> </label><br>
-  <%= f.text_field :brand, value: "", placeholder: "Enter new Brand" %><br>
+  <%= f.text_field :brand, value: @item.brand, placeholder: "Enter new Brand" %><br>
   <label> <%= @item.category %> </label><br>
-  <%= f.text_field :category, value: "", placeholder: "Enter new Category" %><br>
+  <%= f.text_field :category, value: @item.category, placeholder: "Enter new Category" %><br>
   <%= image_tag @item.image.url(:large) %>
   <%= f.file_field :image %><br>
   <%= f.submit "Update Item" %>
