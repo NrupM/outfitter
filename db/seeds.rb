@@ -16,7 +16,7 @@ Outfit.create([
 ])
 
 casual_friday_items = Item.create([
-  {name: 'favorite grey button-down', brand: 'Louis Vutton', category: 'shirt'},
+  {name: 'favorite grey button-down', brand: 'Louis Vutton', category: 'shirt', image: File.new("app/assets/images/pants_black_slacks.jpeg")},
   {name: 'blue distressed jeans', brand: 'seven', category: 'pants'},
   {name: 'brown loafers', brand: 'Aldo', category: 'shoes'}
 ])
