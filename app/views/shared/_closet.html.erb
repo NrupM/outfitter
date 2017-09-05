@@ -1,3 +1,14 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.item').on('click', function(){
+      console.log("user clicked item!")
+    });
+    
+  });
+</script>
+
+
 <div class="container-fluid">
     <div class="row main">
         <div class="col s12 m4 sidebar">
@@ -14,7 +25,7 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item">
+                          <div class="item" data-id="<%= item.id%>">
                             <%= image_tag item.image.url(:medium) %><br>
                             <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                           </div>
@@ -33,7 +44,7 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item">
+                          <div class="item" data-id="<%= item.id %>">
                             <%= image_tag item.image.url(:medium) %><br>
                             <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                           </div>
@@ -51,10 +62,10 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item">
-                            <%= image_tag item.image.url(:medium) %><br>
-                            <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
-                          </div>
+                        <div class="item" data-id="<%= item.id %>">
+                          <%= image_tag item.image.url(:medium) %><br>
+                          <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                        </div>
                       </div>
                       <% end %>
                     </div>
