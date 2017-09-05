@@ -5,7 +5,9 @@
       e.preventDefault();
       console.log("user clicked item!");
       let item_id = $(this).closest('.item').data('item-id');
-      // let id = $(this).closest('.pool').data('pool-id');
+      $('input[name=shirt_id]').val(item_id);
+      $('input[name=pants_id]').val(item_id);
+      $('input[name=shoes_id]').val(item_id);
 
       console.log("item-id is", item_id);
     });
