@@ -1,14 +1,21 @@
 <%= render "shared/header" %>
-<h2>New Outfit</h2>
-<%= form_for @outfit do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :tag, placeholder: "Tag" %>
+<%= render "shared/closet"%>
 
-  <%= radio_button_tag(:item_id, "1") %>
-  <%= label_tag(:item_id_1, "1") %>
-  <%= radio_button_tag(:item_id, "2") %>
-  <%= label_tag(:item_id_2, "2") %>
-  <%= radio_button_tag(:item_id, "3") %>
-  <%= label_tag(:item_id_3, "3") %> <br>
-  <%= f.submit "Create Outfit" %>
-<% end %>
+    <div class="col s12 m6">
+      <h2>New Outfit</h2>
+
+      <%= form_for @outfit do |f| %>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.text_field :tag, placeholder: "Tag" %>
+        <%= f.text_field :item_id, value: "" %>
+        <%= f.submit "Create Outfit" %>
+      <% end %>
+
+      <% @items.each do |item| %>
+
+        <%= item.id %>
+        <%= image_tag item.image.url(:small) %>
+
+      <% end %>
+    </div>
+<%= render "shared/builder"%>
