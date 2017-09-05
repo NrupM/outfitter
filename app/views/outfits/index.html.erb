@@ -4,24 +4,27 @@
 
   <h3> My Outfits </h3>
   <div class="row">
-      <% @outfits.each do |outfit| %>
-      <div class="col s12 m4">
-        <div class="carousel">
-            <p>
-              <strong>Name:</strong> <%= outfit.name %><br>
-              <strong>Tag:</strong> <%= outfit.tag %><br>
-              <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
 
 
-                <% outfit.items.each do |item| %>
-                  <a class="carousel-item">
-                 <%= image_tag item.image.url(:small) %><br>
-                  </a>
-                <% end %>
+  <% @outfits.each do |outfit| %>
+  <div class="col s12 m4 center-align">
+    <div class="carousel">
+        <p>
+        <span class="outfit-name"> <%= outfit.name %></span><br>
+          <strong>Tag:</strong> <%= outfit.tag %><br>
 
-            </p>
-        </div>
-      </div>
-      <% end %>
+
+            <% outfit.items.each do |item| %>
+
+             <%= image_tag item.image.url(:small) %><br>
+
+            <% end %>
+            <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
+
+        </p>
+    </div>
   </div>
+  <% end %>
+  </div>
+
 </div>
