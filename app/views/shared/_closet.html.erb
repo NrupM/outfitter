@@ -1,10 +1,15 @@
 <script type="text/javascript">
   $(document).ready(function(){
 
-    $('.item').on('click', function(){
-      console.log("user clicked item!")
+    $('.item').on('click', function(e){
+      e.preventDefault();
+      console.log("user clicked item!");
+      let item_id = $(this).closest('.item').data('item-id');
+      // let id = $(this).closest('.pool').data('pool-id');
+
+      console.log("item-id is", item_id);
     });
-    
+
   });
 </script>
 
@@ -25,7 +30,7 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item" data-id="<%= item.id%>">
+                          <div class="item" data-item-id="<%= item.id%>">
                             <%= image_tag item.image.url(:medium) %><br>
                             <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                           </div>
@@ -44,7 +49,7 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item" data-id="<%= item.id %>">
+                          <div class="item" data-item-id="<%= item.id %>">
                             <%= image_tag item.image.url(:medium) %><br>
                             <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                           </div>
@@ -62,7 +67,7 @@
                     <div class="clothing-type">
                       <% @items.each do |item| %>
                       <div class="col s12 m4">
-                        <div class="item" data-id="<%= item.id %>">
+                        <div class="item" data-item-id="<%= item.id %>">
                           <%= image_tag item.image.url(:medium) %><br>
                           <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                         </div>
