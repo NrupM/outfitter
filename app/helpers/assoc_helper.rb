@@ -1,0 +1,2 @@
+module AssocHelper
+end
