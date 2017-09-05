@@ -8,6 +8,8 @@ class OutfitsController < ApplicationController
   end
 
   def create
+    p "HELLO OUTFIT CREATE"
+    p params[:item_id]
     outfit = Outfit.create(outfit_params)
     if outfit.save
       redirect_to outfit_path(outfit)

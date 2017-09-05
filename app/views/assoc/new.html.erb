@@ -3,5 +3,7 @@
 
 <%= form_for @outfit do |f| %>
   <%= f.text_field :outfit_id, value: @outfit.id %>
-  <%= f.text_field :item_id, value: @outfit.items.map{ |item| item.id } %>
+  <%= f.text_field :item_id, value:"" %>
+  <!-- <%= f.text_field :item_id, value: @outfit.items.map{ |item| item.id } %> -->
+  <%= f.submit "Add item to outfit" %>
 <% end %>

@@ -3,5 +3,12 @@
 <%= form_for @outfit do |f| %>
   <%= f.text_field :name, placeholder: "Name" %>
   <%= f.text_field :tag, placeholder: "Tag" %>
+
+  <%= radio_button_tag(:item_id, "1") %>
+  <%= label_tag(:item_id_1, "1") %>
+  <%= radio_button_tag(:item_id, "2") %>
+  <%= label_tag(:item_id_2, "2") %>
+  <%= radio_button_tag(:item_id, "3") %>
+  <%= label_tag(:item_id_3, "3") %> <br>
   <%= f.submit "Create Outfit" %>
 <% end %>

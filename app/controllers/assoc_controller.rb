@@ -9,7 +9,9 @@ class AssocController < ApplicationController
 
   def create
     p "create assoc hello"
-    # p params[:outfit_id]
+    p params[:outfit_id]
+    p params[:item_id]
+
   end
 
   # private
