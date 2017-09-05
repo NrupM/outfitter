@@ -21,9 +21,9 @@ Rails.application.routes.draw do
   patch '/outfits/:id', to: 'outfits#update' #
   delete '/outfits/:id', to: 'outfits#destroy' #
 
-  # assoc routes are for associating existing items with outfits
-  get '/outfits/:id/assoc/new', to: 'assoc#new', as: 'new_assoc'
-  post '/outfits/:id/assoc', to: 'assoc#create'
+  # these nested routes are for associating existing items with outfits
+  get '/outfits/:id/items/new', to: 'assoc#new', as: 'new_assoc'
+  post '/outfits/:id/items', to: 'assoc#create'
 
   get '/users', to: 'users#index', as: 'users' #index.html.erb
   get '/users/new', to: 'users#new', as: 'new_user' #new.html.erb
