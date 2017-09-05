@@ -1,10 +1,12 @@
-<h1>EDIT an oufit by id!</h1>
+<%= render "shared/header" %>
+
+<h2>Edit Outfit</h2>
 
 <%= form_for @outfit do |f| %>
-  <label> <%= @outfit.name %> </label> <br>
-  <%= f.text_field :name, value: "", placeholder: "Enter new Name" %><br>
-  <label> <%= @outfit.tag %> </label><br>
-  <%= f.text_field :tag, value: "", placeholder: "Enter new Tag" %><br>
+  <label> Name </label> <br>
+  <%= f.text_field :name, value: @outfit.name, placeholder: "Enter new Name" %><br>
+  <label> Tag </label><br>
+  <%= f.text_field :tag, value: @outfit.tag, placeholder: "Enter new Tag" %><br>
   <%= f.submit "Update Outfit" %>
 <% end %>
 <br><br><br><br>

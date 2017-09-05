@@ -1,11 +1,13 @@
-<h1>EDIT one item form</h1>
+<%= render "shared/header" %>
+
+<h2>Edit Item</h2>
 
 <%= form_for @item do |f| %>
-  <label> <%= @item.name %> </label> <br>
+  <label> Name </label> <br>
   <%= f.text_field :name, value: @item.name, placeholder: "Enter new Name" %><br>
-  <label> <%= @item.brand %> </label><br>
+  <label> Brand </label><br>
   <%= f.text_field :brand, value: @item.brand, placeholder: "Enter new Brand" %><br>
-  <label> <%= @item.category %> </label><br>
+  <label> Category </label><br>
   <%= f.text_field :category, value: @item.category, placeholder: "Enter new Category" %><br>
   <%= image_tag @item.image.url(:large) %>
   <%= f.file_field :image %><br>

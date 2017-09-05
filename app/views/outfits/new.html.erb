@@ -1,7 +1,21 @@
 <%= render "shared/header" %>
-<h1> hallelujah a new OUTFIT form</h1>
-<%= form_for @outfit do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :tag, placeholder: "Tag" %>
-  <%= f.submit "Create Outfit" %>
-<% end %>
+<%= render "shared/closet"%>
+
+    <div class="col s12 m6">
+      <h2>New Outfit</h2>
+
+      <%= form_for @outfit do |f| %>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.text_field :tag, placeholder: "Tag" %>
+        <%= f.text_field :item_id, value: "" %>
+        <%= f.submit "Create Outfit" %>
+      <% end %>
+
+      <% @items.each do |item| %>
+
+        <%= item.id %>
+        <%= image_tag item.image.url(:small) %>
+
+      <% end %>
+    </div>
+<%= render "shared/builder"%>
