@@ -1,16 +1,27 @@
 <%= render "shared/header" %>
-<h2>All Outfits</h2>
-<% @outfits.each do |outfit| %>
-<p>
-  <strong>id:</strong> <%= outfit.id %><br>
-  <strong>Name:</strong> <%= outfit.name %><br>
-  <strong>Tag:</strong> <%= outfit.tag %><br>
-  <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
+<div class="container">
 
 
-  <% outfit.items.each do |item| %>
-    <%= image_tag item.image.url(:small) %><br>
-  <% end %>
+  <h3> My Outfits </h3>
+  <div class="row">
+      <% @outfits.each do |outfit| %>
+      <div class="col s12 m4">
+        <div class="carousel">
+            <p>
+              <strong>Name:</strong> <%= outfit.name %><br>
+              <strong>Tag:</strong> <%= outfit.tag %><br>
+              <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
 
-</p>
-<% end %>
+
+                <% outfit.items.each do |item| %>
+                  <a class="carousel-item">
+                 <%= image_tag item.image.url(:small) %><br>
+                  </a>
+                <% end %>
+
+            </p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
