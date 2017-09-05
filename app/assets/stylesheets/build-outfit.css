@@ -93,6 +93,12 @@ div.horizontal {
   max-height: 25%;
 }
 
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 10px 10px 0px;
+  text-align: ;
+}
+
 .btn {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
