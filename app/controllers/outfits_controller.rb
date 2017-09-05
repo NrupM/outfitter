@@ -15,7 +15,11 @@ class OutfitsController < ApplicationController
 
     outfit = Outfit.create(outfit_params)
     if outfit.save
-      new_item = Item.find_by_id(params[:item_id])
+      new_item = Item.find_by_id(params[:shirt_id])
+      outfit.items << new_item
+      new_item = Item.find_by_id(params[:pants_id])
+      outfit.items << new_item
+      new_item = Item.find_by_id(params[:shoes_id])
       outfit.items << new_item
       redirect_to outfit_path(outfit)
     end
