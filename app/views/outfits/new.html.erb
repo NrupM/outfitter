@@ -7,7 +7,7 @@
       <%= form_for @outfit do |f| %>
         <%= f.text_field :name, placeholder: "Name" %>
         <%= f.text_field :tag, placeholder: "Tag" %>
-        <%= f.text_field :item_id, value: "" %>
+        <%= text_field_tag "item_id", nil, placeholder: "ITEM ID" %>
         <%= f.submit "Create Outfit" %>
       <% end %>
 

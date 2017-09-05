@@ -10,11 +10,13 @@ class OutfitsController < ApplicationController
 
   def create
     p "HELLO OUTFIT CREATE"
-    p params[:item_id]
-    outfit = Outfit.create(outfit_params)
-    if outfit.save
-      redirect_to outfit_path(outfit)
-    end
+    p "NAME: #{outfit_params[:name]}"
+    p "ITEM_ID: #{params[:item_id]}"
+
+    # outfit = Outfit.create(outfit_params)
+    # if outfit.save
+    #   redirect_to outfit_path(outfit)
+    # end
   end
 
   def show
