@@ -5,18 +5,25 @@
       e.preventDefault();
       console.log("user clicked item!");
       let item_id = $(this).closest('.item').data('item-id');
+      let section = $(this).parent().parent().parent().data('section-id')
       let imgUrl = e.target.getAttribute('src');
       let imgHTML = `<img src=${imgUrl}>`;
-      $('input[name=shirt_id]').val(item_id);
-      $('input[name=pants_id]').val(item_id);
-      $('input[name=shoes_id]').val(item_id);
-      $('#shirt-target').html(imgHTML);
-      $('#pants-target').html(imgHTML);
-      $('#shoes-target').html(imgHTML);
 
-
+      if(section === "shirt"){
+        $('input[name=shirt_id]').val(item_id);
+        $('#shirt-target').html(imgHTML);
+      }
+      else if (section === "pants") {
+        $('input[name=pants_id]').val(item_id);
+        $('#pants-target').html(imgHTML);
+      }
+      else {
+        $('input[name=shoes_id]').val(item_id);
+        $('#shoes-target').html(imgHTML);
+      }
       console.log(imgUrl)
       console.log("item-id is", item_id);
+      console.log(section)
     });
 
   });
@@ -36,7 +43,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="horizontal">
-                    <div class="clothing-type">
+                    <div class="clothing-type" data-section-id="shirt">
                       <% shirts = @items.select {|item| item.category == "shirt"} %>
                       <% shirts.each do |item| %>
                       <div class="col s12 m4">
@@ -56,7 +63,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="horizontal">
-                    <div class="clothing-type">
+                    <div class="clothing-type" data-section-id="pants">
                       <% pants = @items.select {|item| item.category == "pants"} %>
                       <% pants.each do |item| %>
                       <div class="col s12 m4">
@@ -75,7 +82,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="horizontal">
-                    <div class="clothing-type">
+                    <div class="clothing-type" data-section-id="shoes">
                       <% shoes = @items.select{|item| item.category == "shoes"}%>
                       <% shoes.each do |item| %>
                       <div class="col s12 m4">
