@@ -1,17 +1,35 @@
 <%= render "shared/header" %>
+<div class="container">
+  <div class="row">
 
-<h2>Edit Item</h2>
+          <%= form_for @item do |f| %>
+          <div class="col s12 m6">
+            <h4 class="form-title">Edit your item</h4>
 
-<%= form_for @item do |f| %>
-  <label> Name </label> <br>
-  <%= f.text_field :name, value: @item.name, placeholder: "Enter new Name" %><br>
-  <label> Brand </label><br>
-  <%= f.text_field :brand, value: @item.brand, placeholder: "Enter new Brand" %><br>
-  <label> Category </label><br>
-  <%= f.text_field :category, value: @item.category, placeholder: "Enter new Category" %><br>
-  <%= image_tag @item.image.url(:large) %>
-  <%= f.file_field :image %><br>
-  <%= f.submit "Update Item" %>
-<% end %>
-<br><br><br><br>
-<%= button_to "Delete Item", { action: "destroy", id: @item.id }, method: :delete %>
+
+          <label> Name </label> <br>
+          <%= f.text_field :name, value: @item.name, placeholder: "Enter new Name" %><br>
+          <label> Brand </label><br>
+          <%= f.text_field :brand, value: @item.brand, placeholder: "Enter new Brand" %><br>
+          <label> Category </label><br>
+          <%= f.text_field :category, value: @item.category, placeholder: "Enter new Category" %><br>
+          <%= button_to "Delete Item", { action: "destroy", id: @item.id }, method: :delete %>
+          <%= button_to "Delete Item", { action: "destroy", id: @item.id },
+                                    method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+
+
+          <div class="col s12 m6">
+            <%= image_tag @item.image.url(:large) %>
+
+
+          <%= f.file_field :image %> <br/>
+            <div class="submit-new-item right-align">
+            <button class="btn waves-effect green" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            </div>
+          <% end %>
+
+  </div>
+</div>

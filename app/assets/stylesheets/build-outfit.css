@@ -96,7 +96,16 @@ div.horizontal {
 .form-title {
   font-family: 'Oswald', sans-serif;
   padding: 10px 10px 10px 0px;
-  text-align: ;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+}
+
+.form-title-edit {
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+  font-size: 250%;
 }
 
 .btn {
@@ -109,6 +118,9 @@ div.horizontal {
   color: #ffffff;
   font-size: 12px;
   background: #3cb0fd;
+  float: none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: initial; /* restore text-align to default */
 }
 
 .btn:hover {

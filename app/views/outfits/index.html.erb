@@ -1,22 +1,26 @@
-<%= render "shared/header" %>
-<div class="container">
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.outfit').on('click', function(){
+      console.log("user clicked item")
+    });
+  });
+</script>
 
+<%= render "shared/header" %>
+
+<div class="container">
 
   <h3> My Outfits </h3>
   <div class="row">
-
-
   <% @outfits.each do |outfit| %>
   <div class="row">
     <div class="col s12 m4 center-align">
-          <p>
-
-          <span class="outfit-name"><%= link_to outfit.name, controller: "outfits", action: "show", id: outfit.id %></span><br>
-            <strong>Tag:</strong> <%= outfit.tag %><br>
-            <div>
-
-
+          <p class="outfit" data-id="<%= outfit.id %>">
+          <span class="outfit outfit-name" data-id="<%= outfit.id %>"><%= outfit.name %></span><br>
+            <strong class="outfit" data-id="<%= outfit.id %>">Tag:</strong> <%= outfit.tag %><br>
+            <div class="outfit" data-id="<%= outfit.id %>">
               <% outfit.items.each do |item| %>
+
                <%= image_tag item.image.url(:small) %><br>
               <% end %>
               </div>
@@ -29,7 +33,7 @@
   <% @outfits.each do |outfit| %>
     <div class="col s12 m4 center-align">
           <p>
-          <span class="outfit-name"> <%= outfit.name %></span><br>
+          <span class="outfit-name"><%= outfit.name %></span><br>
             <strong>Tag:</strong> <%= outfit.tag %><br>
               <% outfit.items.each do |item| %>
                <%= image_tag item.image.url(:small) %><br>
