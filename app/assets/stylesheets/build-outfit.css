@@ -37,7 +37,9 @@ body {
   padding-top: 10px;
   font-weight: 600;
 }
-
+.clothing-type {
+  width: auto !important;
+}
 .table {
   display: table;
 }
@@ -77,17 +79,12 @@ div.horizontal {
   overflow: hidden;
 }
 
-.item img {
+/*.item img {
   width: 100%;
 }
-
+*/
 .canvas img {
   width: 50%;
-}
-
-i {
-  width: 32px;
-  height: 32px;
 }
 
 .img1 {
@@ -96,6 +93,55 @@ i {
 .placeholder {
   min-width: 25vh;
   max-height: 25%;
+}
+
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 10px 10px 0px;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+}
+
+.form-title-edit {
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+  font-size: 250%;
+}
+
+/* my outfits index */
+
+.outfit-index-title {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+  font-size: 250%;
+}
+a {
+  color: #c4aaff;
+
+  text-decoration: none !important;
+}
+
+.outfit-name {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.07em;
+  line-height: 0.04em;
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+.outfit-tag {
+  font-family: 'Oswald', sans-serif;
+  opacity: 0.65;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  line-height: 0.04em;
+  padding-top: 10px;
+  font-size: 12px;
 }
 
 .btn {
@@ -108,6 +154,9 @@ i {
   color: #ffffff;
   font-size: 12px;
   background: #3cb0fd;
+  float: none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: initial; /* restore text-align to default */
 }
 
 .btn:hover {
