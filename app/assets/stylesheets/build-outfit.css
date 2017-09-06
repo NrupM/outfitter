@@ -115,8 +115,17 @@ div.horizontal {
   text-decoration: none;
 }
 
+
+h1{
+  color: #FFFFFF;
+  font-family: 'Bree Serif', serif;
+  text-transform: capitalize;
+  text-shadow: 4px 4px 6px #000000;
+}
+
 .background {
   background-image: url('coats.jpg');
+  background-size: cover;
   background-position: center;
   height:100vh;
   text-align: center;
@@ -124,10 +133,11 @@ div.horizontal {
 }
 
 .start {
-  text-transform: capitalize;
   color: #FFFFFF;
+  text-transform: capitalize;
   font-family: 'Bree Serif', serif;
-  text-shadow: 4px 4px 6px #000000;  text-align: center;
+  text-shadow: 4px 4px 6px #000000;
+  text-align: center;
   margin: 0;
-  font-size: 70px;
+  font-size: 50px;
 }
