@@ -1,7 +1,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
 
-    $('.item').on('click', function(e){
+    $('.item').find('img').on('click', function(e){
       e.preventDefault();
       console.log("user clicked item!");
       let item_id = $(this).closest('.item').data('item-id');
@@ -30,7 +30,7 @@
                 <div class="divider"></div>
                 <div class="horizontal">
                     <div class="clothing-type">
-                      <% shirts = @items.select {|element| element.category == "shirt"} %>
+                      <% shirts = @items.select {|item| item.category == "shirt"} %>
                       <% shirts.each do |item| %>
                       <div class="col s12 m4">
                           <div class="item" data-item-id="<%= item.id %>">
@@ -50,7 +50,8 @@
                 <div class="divider"></div>
                 <div class="horizontal">
                     <div class="clothing-type">
-                      <% @items.each do |item| %>
+                      <% pants = @items.select {|item| item.category == "pants"} %>
+                      <% pants.each do |item| %>
                       <div class="col s12 m4">
                           <div class="item" data-item-id="<%= item.id %>">
                             <%= image_tag item.image.url(:medium) %><br>
@@ -68,7 +69,8 @@
                 <div class="divider"></div>
                 <div class="horizontal">
                     <div class="clothing-type">
-                      <% @items.each do |item| %>
+                      <% shoes = @items.select{|item| item.category == "shoes"}%>
+                      <% shoes.each do |item| %>
                       <div class="col s12 m4">
                         <div class="item" data-item-id="<%= item.id %>">
                           <%= image_tag item.image.url(:medium) %><br>
