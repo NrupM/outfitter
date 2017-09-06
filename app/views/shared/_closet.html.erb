@@ -5,10 +5,17 @@
       e.preventDefault();
       console.log("user clicked item!");
       let item_id = $(this).closest('.item').data('item-id');
+      let imgUrl = e.target.getAttribute('src');
+      let imgHTML = `<img src=${imgUrl}>`;
       $('input[name=shirt_id]').val(item_id);
       $('input[name=pants_id]').val(item_id);
       $('input[name=shoes_id]').val(item_id);
+      $('#shirt-target').html(imgHTML);
+      $('#pants-target').html(imgHTML);
+      $('#shoes-target').html(imgHTML);
 
+
+      console.log(imgUrl)
       console.log("item-id is", item_id);
     });
 
