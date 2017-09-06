@@ -30,6 +30,7 @@ class OutfitsController < ApplicationController
   end
 
   def edit
+    @items = Item.all
     @outfit = Outfit.find_by_id(params[:id])
   end
 
