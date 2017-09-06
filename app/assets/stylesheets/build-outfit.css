@@ -85,11 +85,6 @@ div.horizontal {
   width: 50%;
 }
 
-i {
-  width: 32px;
-  height: 32px;
-}
-
 .img1 {
   margin-bottom: 30px;
 }
@@ -118,4 +113,42 @@ i {
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
+}
+
+
+.brand-logo{
+  color: #FFFFFF;
+  text-shadow: 4px 4px 6px #000000;
+  font-size: 180px;
+}
+
+.Hero-Text {
+  color: #FFFFFF;
+  /*font-family: 'Roboto', sans-serif;*/
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+.background {
+  background-image: url('coats.jpg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.get-started{
+  color: #FFFFFF;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+.start {
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 4px 4px 6px #000000;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
 }
