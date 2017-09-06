@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Overview
+  A fashion application that Users can manage a digital closet
 
-Things you may want to cover:
+Wireframe
+  1.
+  2.
+  3.
+  4.
+  5.
+  6.
+  7.
 
-* Ruby version
+Technologies used
+  1. Ruby on Rails
+  2. Javascript
+  3. Jquery
+  4. materialize css
 
-* System dependencies
+Wish list
+  1. user can scale clothes on create outfit page
+  2. create users and sessions
+  3. view different users outfits and save them to own outfit
 
-* Configuration
+Contributors
+  1. Sepp Hammer
+  2. Mary Northrup
+  3. Garrick Ngai
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+brew install imagemagick
