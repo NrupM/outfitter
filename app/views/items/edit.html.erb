@@ -14,12 +14,10 @@
           <label> Category </label><br>
           <%= f.text_field :category, value: @item.category, placeholder: "Enter new Category" %><br>
           <%= button_to "Delete Item", { action: "destroy", id: @item.id }, method: :delete %>
-          <%= button_to "Delete Item", { action: "destroy", id: @item.id },
-                                    method: :delete, data: { confirm: "Are you sure?" } %>
+
           </div>
 
 
-          <div class="col s12 m6">
             <%= image_tag @item.image.url(:large) %>
 
 
@@ -31,5 +29,4 @@
             </div>
           <% end %>
 
-  </div>
 </div>
