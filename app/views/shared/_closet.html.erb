@@ -30,9 +30,10 @@
                 <div class="divider"></div>
                 <div class="horizontal">
                     <div class="clothing-type">
-                      <% @items.each do |item| %>
+                      <% shirts = @items.select {|element| element.category == "shirt"} %>
+                      <% shirts.each do |item| %>
                       <div class="col s12 m4">
-                          <div class="item" data-item-id="<%= item.id%>">
+                          <div class="item" data-item-id="<%= item.id %>">
                             <%= image_tag item.image.url(:medium) %><br>
                             <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
                           </div>
