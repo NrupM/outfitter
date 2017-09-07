@@ -4,12 +4,15 @@
         <p>Click an item in your closet to add to outfit!</p>
         <div class="col s12 m6">
             <div id="shirt-target" class="canvas img">
+              <%= image_tag outfit.items[0].image.url(:large)%>
             </div>
             <div id="shoes-target" class="canvas img">
+              <%= image_tag outfit.items[2].image.url(:large)%>
             </div>
         </div>
         <div class="col s12 m6">
             <div id="pants-target" class="canvas img">
+              <%= image_tag outfit.items[1].image.url(:large)%>
             </div>
         </div>
     </div>

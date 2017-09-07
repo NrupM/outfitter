@@ -6,14 +6,15 @@
   <%= button_to "Delete Outfit", { action: "destroy", id: @outfit.id }, method: "delete" %>
 
   <%= form_for @outfit do |f| %>
-  <label> Name </label> <br>
   <%= f.text_field :name, value: @outfit.name, placeholder: "Enter new Name" %><br>
-  <label> Tag </label><br>
   <%= f.text_field :tag, value: @outfit.tag, placeholder: "Enter new Tag" %><br>
+  <%= hidden_field_tag "shirt_id", @outfit.items[0].id, placeholder: "SHIRT ID" %>
+  <%= hidden_field_tag "pants_id", @outfit.items[1].id, placeholder: "PANTS ID" %>
+  <%= hidden_field_tag "shoes_id", @outfit.items[2].id, placeholder: "SHOES ID" %>
   <%= f.submit "Update Outfit" %>
   <% end %>
 
 </div>
 
 
-<%= render "shared/builder" %>
+<%= render :partial => 'shared/builder', :locals => { :outfit => @outfit } %>
