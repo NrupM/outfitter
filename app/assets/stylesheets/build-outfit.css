@@ -184,7 +184,7 @@ a {
 }
 
 .background {
-  background-image: url(coats.jpg);
+  background-image: url('https://i.imgur.com/pjutwuA.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
