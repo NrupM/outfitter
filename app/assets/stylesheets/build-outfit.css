@@ -1,15 +1,16 @@
 body {
-  font-family: 'Work sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0em;
   line-height: 1.6em;
-  font-family: 'Taviraj';
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   line-height: 2em;
-  letter-spacing: .05em;
+  letter-spacing: .20em;
   font-weight: 300;
   padding: 0;
+  margin: 0;
 }
 
 .nav {
@@ -18,41 +19,60 @@ body {
 }
 
 .brand-logo {
-  font-family: "Work sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 45px !important;
   text-transform: none;
-  letter-spacing: .085em;
-  font-variant: small-caps;
-  font-weight: 700;
+  letter-spacing: .120em;
+  font-weight: 900;
   margin-left: 2%;
 }
 
 .main {
   margin-top: 1%;
-  max-height: 100%;
 }
 
-.nav ul a {
-  font-size: 19px !important;
-  font-weight: 300;
-  
+.nav ul {
+  font-size: 20px !important;
+  font-weight: 400;
+  letter-spacing: .12em;  
 }
+
+/* closet view start */
+.closet {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: #333;
+  line-height: 1.3em;
+  letter-spacing: -0.03em
+}
+.advice {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,.5);
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  margin-bottom: 1.091em;
+}
+
 .title {
-  font-size: 19px;
+  font-size: 14px;
   color: black;
   letter-spacing: 0.1em;
 }
 
-.divider {
-  margin-bottom: 1em;
-}
-
-.clothing-type-title {
-  font-variant: small-caps;
-  letter-spacing: 0.061em;
-  line-height: 0.03em;
+.clothing-type-title.p {
+  letter-spacing: 0.081em;
+  line-height: 100%;
   padding-top: 10px;
-  font-weight: 600;
+  font-weight: 900 !important;
+  font-variant: small-caps;
+  font-size: 20px !important;
 }
 .clothing-type {
   width: auto !important;
@@ -96,10 +116,6 @@ div.horizontal {
   overflow: hidden;
 }
 
-/*.item img {
-  width: 100%;
-}
-*/
 .canvas img {
   width: 50%;
 }
@@ -112,15 +128,18 @@ div.horizontal {
   max-height: 25%;
 }
 
+.form-padding{
+  padding: 2% 1% 0% 0%;  
+}
 .form-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   padding: 10px 10px 10px 0px;
   letter-spacing: 0.03em;
   line-height: 200%;
 }
 
 .form-title-edit {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   padding: 10px 10px 10px 10px;
   letter-spacing: 0.03em;
   line-height: 200%;
@@ -130,7 +149,7 @@ div.horizontal {
 /* my outfits index */
 
 .outfit-index-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   letter-spacing: 0.03em;
   line-height: 200%;
   font-size: 250%;
@@ -142,7 +161,7 @@ a {
 }
 
 .outfit-name {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   text-decoration: none;
   font-variant: small-caps;
   letter-spacing: 0.07em;
@@ -152,7 +171,7 @@ a {
 }
 
 .outfit-tag {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   opacity: 0.65;
   text-decoration: none;
   letter-spacing: 0.07em;

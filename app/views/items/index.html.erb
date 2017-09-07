@@ -1,15 +1,16 @@
 <%= render "shared/header" %>
 <!-- main container -->
-<div class="container-fluid">
+<div class="container">
   <div class="row main">
-    <div class="col s12 m1">
 
-    </div>
-    <div class="col s12 m10 sidebar">
-    <%= render "shared/closet" %>
-    </div>
-    <div class="col s12 m1">
+    <div class="col s12 m12 sidebar">
+      <div class="closet center-align">My closet</div>
+      <p class="advice center-align">Add individual items to your closet. Use your items when putting new outfits together</p>
+      <div class="center-align">
+      <a href="http://localhost:3000/items/new" class="btn-floating fab btn-xs waves-effect waves-light right-align blue"><i class="material-icons">add</i></a>
+      </div>
+      <%= render "shared/closet" %>
+      </div>
 
-    </div>
   </div>
 </div>

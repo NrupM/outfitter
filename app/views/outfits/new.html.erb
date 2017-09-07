@@ -5,7 +5,8 @@
     <%= render "shared/closet"%>
     </div>
       <div class="col s12 m6">
-        <h2>New Outfit</h2>
+      <div class="" style="padding-top: 1%;">
+        <h5>Create an outfit</h5></div>
         <%= form_for @outfit do |f| %>
           <%= f.text_field :name, placeholder: "Name", :required => true %>
           <%= f.text_field :tag, placeholder: "Tag" %>
