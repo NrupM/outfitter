@@ -1,17 +1,29 @@
 body {
+  font-family: 'Work sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  font-family: 'Taviraj';
+  font-size: 16px;
+  line-height: 2em;
+  letter-spacing: .05em;
+  font-weight: 300;
   padding: 0;
-  margin: 0;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
 }
 
 .nav {
   background-color: #212121 !important;
+  margin-right: 20px !important;
 }
 
 .brand-logo {
-  letter-spacing: 10px;
+  font-family: "Work sans", sans-serif;
+  font-size: 45px !important;
+  text-transform: none;
+  letter-spacing: .085em;
   font-variant: small-caps;
+  font-weight: 700;
   margin-left: 2%;
 }
 
@@ -20,6 +32,11 @@ body {
   max-height: 100%;
 }
 
+.nav ul a {
+  font-size: 19px !important;
+  font-weight: 300;
+  
+}
 .title {
   font-size: 19px;
   color: black;
