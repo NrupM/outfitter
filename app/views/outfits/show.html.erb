@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<h2>Outfit <%= @outfit.name %> </h2>
+<p>
+  <strong>Name:</strong> <%= @outfit.name %>
+  <strong>Tag:</strong> <%= @outfit.tag %><br>
+  <%= link_to "Edit", controller: "outfits", action: "edit", id: @outfit.id %><br>
+
+  <% @outfit.items.each do |item| %>
+    <%= image_tag item.image.url(:medium) %>
+  <% end %>
+</p>

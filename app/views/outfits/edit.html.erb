@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+
+<h2>Edit Outfit</h2>
+
+<%= form_for @outfit do |f| %>
+  <label> Name </label> <br>
+  <%= f.text_field :name, value: @outfit.name, placeholder: "Enter new Name" %><br>
+  <label> Tag </label><br>
+  <%= f.text_field :tag, value: @outfit.tag, placeholder: "Enter new Tag" %><br>
+  <%= f.submit "Update Outfit" %>
+<% end %>
+<br><br><br><br>
+<%= button_to "Delete Outfit", { action: "destroy", id: @outfit.id }, method: "delete" %>

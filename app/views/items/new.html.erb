@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+<div class="container">
+  <h4>Add new item</h4>
+
+  <%= form_for @item do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :brand, placeholder: "Brand" %>
+    <%= f.text_field :category, placeholder: "Category" %>
+    <%= f.file_field :image %>
+    <button class="btn waves-effect waves-light align" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  <% end %>
+</div>
