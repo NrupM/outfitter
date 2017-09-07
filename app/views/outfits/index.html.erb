@@ -1,37 +1,32 @@
 <%= render "shared/header" %>
 <div class="container">
-
-
-  <h3 class="outfit-index-title"> All my outfits </h3>
-  <div class="divider">
-
-  </div>
   <div class="row">
+      <div class="closet center-align">My outfits </div>
+      <p class="advice center-align">You can use this page to see what you&#x27;
+        ve already created and plan your outfits for the week</p>
+      <% @outfits.each do |outfit| %>
+            <div class="row">
+              <div class="col s12 m4 center-align">
+                    <p>
 
+                    <span class="outfit-name">
+                      <%= link_to outfit.name, controller: "outfits", action: "show", id: outfit.id %>
+                    </span><br>
+                      <span class="outfit-tag"># <%= outfit.tag %></span><br>
+                      <div>
+                        <%= link_to(@outfit, controller: "outfits", action: "show", id: outfit.id) do %>
+                        <% outfit.items.each do |item| %>
 
-        <% @outfits.each do |outfit| %>
-        <div class="row">
-          <div class="col s12 m4 center-align">
-                <p>
+                        <%= image_tag item.image.url(:small) %><br>
+                        <% end %>
 
-                <span class="outfit-name">
-                  <%= link_to outfit.name, controller: "outfits", action: "show", id: outfit.id %>
-                </span><br>
-                  <span class="outfit-tag"># <%= outfit.tag %></span><br>
-                  <div>
-                    <%= link_to(@outfit, controller: "outfits", action: "show", id: outfit.id) do %>
-                    <% outfit.items.each do |item| %>
+                        </div>
+                        <% end %>
 
-                     <%= image_tag item.image.url(:small) %><br>
-                    <% end %>
-
-                    </div>
-                    <% end %>
-
-                    <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
-                </p>
+                        <%= link_to "Edit", controller: "outfits", action: "edit", id: outfit.id %><br>
+                    </p>
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
-    </div>
+        </div>
 </div>
