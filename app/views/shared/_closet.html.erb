@@ -33,24 +33,21 @@
             <p>shirts</p>
         </div>
         <div class="divider"></div>
-        <div class="horizontal">
+          <div class="horizontal">
+              <div class="clothing-type" data-section-id="shirt">
 
-            <div class="clothing-type" data-section-id="shirt">
-              <a href="http://localhost:3000/items/new" class="btn-floating fab btn-xs waves-effect waves-light center-align blue"><i class="material-icons">add</i></a>
-
-              <% shirts = @items.select {|item| item.category == "shirt"} %>
-              <% shirts.each do |item| %>
-              <div class="col s12 m4 l4 clothing-type">
-                  <div class="item" data-item-id="<%= item.id %>">
-                    <%= image_tag item.image.url(:small) %><br>
-                    <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
-                  </div>
+                <% shirts = @items.select {|item| item.category == "shirt"} %>
+                  <% shirts.each do |item| %>
+                    <div class="col s12 m4 l4 clothing-type">
+                        <div class="item" data-item-id="<%= item.id %>">
+                          <%= image_tag item.image.url(:small) %><br>
+                          <%= link_to "edit", controller: "items", action: "edit", id: item.id %>
+                        </div>
+                    </div>
+                  <% end %>
               </div>
-              <% end %>
-
-            </div>
+          </div>
         </div>
-    </div>
     <div class="row">
         <div class="clothing-type-title">
             <p>pants</p>
@@ -58,14 +55,13 @@
         <div class="divider"></div>
         <div class="horizontal">
             <div class="clothing-type" data-section-id="pants">
-              <a href="http://localhost:3000/items/new" class="btn-floating fab btn-xs waves-effect waves-light center-align blue"><i class="material-icons">add</i></a>
 
               <% pants = @items.select {|item| item.category == "pants"} %>
               <% pants.each do |item| %>
               <div class="col s12 m4 l4 clothing-type">
                   <div class="item" data-item-id="<%= item.id %>">
                     <%= image_tag item.image.url(:small) %><br>
-                    <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                    <%= link_to "edit", controller: "items", action: "edit", id: item.id %>
                   </div>
               </div>
               <% end %>
@@ -79,14 +75,13 @@
         <div class="divider"></div>
         <div class="horizontal">
             <div class="clothing-type" data-section-id="shoes">
-              <a href="http://localhost:3000/items/new" class="btn-floating fab btn-xs waves-effect waves-light center-align blue"><i class="material-icons">add</i></a>
 
               <% shoes = @items.select{|item| item.category == "shoes"}%>
               <% shoes.each do |item| %>
               <div class="col s12 m4 l4 clothing-type">
                 <div class="item" data-item-id="<%= item.id %>">
                   <%= image_tag item.image.url(:small) %><br>
-                  <%= link_to "Edit", controller: "items", action: "edit", id: item.id %>
+                  <%= link_to "edit", controller: "items", action: "edit", id: item.id %>
                 </div>
               </div>
               <% end %>
