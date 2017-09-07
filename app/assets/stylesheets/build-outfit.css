@@ -184,7 +184,7 @@ a {
 }
 
 .background {
-  background: image-url('coats.jpg');
+  background-image: url(coats.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
