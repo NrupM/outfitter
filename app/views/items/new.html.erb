@@ -1,14 +1,29 @@
 <%= render "shared/header" %>
 <div class="container">
-  <h4>Add new item</h4>
-
+  <h4 class="center-align">Add new item</h4>
   <%= form_for @item do |f| %>
-    <%= f.text_field :name, placeholder: "Name" %>
-    <%= f.text_field :brand, placeholder: "Brand" %>
-    <%= f.text_field :category, placeholder: "Category" %>
-    <%= f.file_field :image %>
-    <button class="btn waves-effect waves-light align" type="submit" name="action">Submit
-      <i class="material-icons right">send</i>
-    </button>
+    <ul>
+    <li><span style="color:red">*</span><%= f.label :name, 'Item description'%>
+      <%= f.text_field :name, required: true %>
+     </li> 
+
+     <li><span style="color:red">* </span><%= f.label :brand, 'Brand' %>
+        <%= f.text_field :brand, required: true %></li>
+      <li><span style="color:red">* </span><%= f.label :category, 'Select: pants, shirts or shoes' %>
+        <%= f.text_field :category %></li>
+     <div class="col s12 m6 center-align">
+        <div class="form-padding center-align">
+            <%= f.file_field :image %> 
+            <button class="btn waves-effect waves-light left-align" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button></li>
+        </div>
+
+        
+      </div>
+    </ul>
+
   <% end %>
 </div>
+
+
