@@ -35,7 +35,7 @@ Technologies used
   2. Javascript
   3. Jquery
   4. materialize css
-
+  5. Heroku
 
 Wish list
   1. user can scale clothes on create outfit page
