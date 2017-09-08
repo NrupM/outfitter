@@ -1,3 +1,5 @@
+//TODO: fix your navbar burger menu by including jquery.., you can also add the JQUERY CDN to your application.erb.html!
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //

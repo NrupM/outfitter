@@ -1,10 +1,11 @@
 <h1>OUTFITTERS README</h1>
 
-Check it out on heroku: 
+Check it out on heroku:
 <a>https://outfitters1.herokuapp.com/</a>
 
 Overview
   A fashion application that Users can manage a digital closet.
+  <!-- TODO: There needs to be a bit more information here.. i.e. purpose, call to action.. why should somebody use this app? -->
 
 
 User Stories
@@ -12,6 +13,7 @@ User Stories
   2. User can view all Items
   3. User can create new outfit using Items
   4. User can edit and delete outfits
+  <!-- TODO: The user story needs to be more descriptive.. like.. users can create outfits through the blank page.. which includes adding items.. etc. -->
 
 
 WireFrame
@@ -29,6 +31,7 @@ App Images
   5. <img src="https://avatars2.githubusercontent.com/u/210414?v=4&s=200">
   6. <img src="https://avatars2.githubusercontent.com/u/210414?v=4&s=200">
   7. <img src="https://avatars2.githubusercontent.com/u/210414?v=4&s=200">
+  <!-- I would hide all of these giant ruby images until you can actually upload working images -->
 
 
 Technologies used
@@ -36,12 +39,14 @@ Technologies used
   2. Javascript
   3. Jquery
   4. materialize css
+  <!-- TODO: what about the gems you used? -->
 
 
 Wish list
   1. user can scale clothes on create outfit page
   2. create different users and sessions
   3. view different users outfits and save them to own outfit
+  <!-- TODO: Can you add a bit more.. i.e. how you plan to do this, what is the timeframe, why do you want to add these features? -->
 
 
 Contributors
@@ -55,3 +60,6 @@ Getting the App Working
   2. bundle install
   3. rails s
   4. open up browser and go to http://localhost:3000/
+  <!-- TODO: what about db:migrate? db:seed? -->
+
+  <!-- A 'Bugs/Issues' Section might be useful to let use know what still needs to be done.. what you plan to fix, etc.-->
