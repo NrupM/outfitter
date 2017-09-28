@@ -1,30 +1,50 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0em;
   line-height: 1.6em;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 16px;
   line-height: 2em;
-  letter-spacing: .20em;
+  /* letter-spacing: 0.2em; */
   font-weight: 300;
   padding: 0;
   margin: 0;
 }
 
-.nav {
-  background-color: #212121 !important;
-  margin-right: 20px !important;
+/* LANDING PAGE start */
+.background {
+  background-image: url("https://i.imgur.com/9TSH4QN.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.landing-page-item {
+  margin-top: 20px !important;
+  margin-bottom: 1.168rem !important;
+  align-content: center;
+  line-height: 25px;
 }
 
 .brand-logo {
-  font-family: "Poppins", sans-serif;
-  font-size: 45px !important;
+  font-family: "Libre Baskerville", serif;
+  font-size: 36px !important;
+  line-height: 110%;
   text-transform: none;
-  letter-spacing: .120em;
   font-weight: 900;
-  margin-left: 2%;
+  margin-top: -80px;
+}
+
+.nav {
+  background-color: #212121 !important;
+  margin-right: 20px !important;
 }
 
 .main {
@@ -34,24 +54,24 @@ body {
 .nav ul {
   font-size: 20px !important;
   font-weight: 400;
-  letter-spacing: .12em;  
+  letter-spacing: 0.12em;
 }
 
 /* closet view start */
 .closet {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-size: 50px;
   color: #333;
   line-height: 1.3em;
-  letter-spacing: -0.03em
+  letter-spacing: -0.03em;
 }
 .advice {
-  font-family: 'Poppins';
+  font-family: "Libre Baskerville", serif;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
 }
@@ -66,7 +86,7 @@ body {
   letter-spacing: 0.1em;
 }
 
-.clothing-type-title p {
+.clothing-type-title {
   letter-spacing: 0.081em;
   line-height: 100%;
   padding-top: 10px;
@@ -116,70 +136,6 @@ div.horizontal {
   overflow: hidden;
 }
 
-.canvas img {
-  width: 50%;
-}
-
-.img1 {
-  margin-bottom: 30px;
-}
-.placeholder {
-  min-width: 25vh;
-  max-height: 25%;
-}
-
-.form-padding{
-  padding: 2% 1% 0% 0%;  
-}
-.form-title {
-  font-family: 'Libre Baskerville', serif;
-  padding: 10px 10px 10px 0px;
-  letter-spacing: 0.03em;
-  line-height: 200%;
-}
-
-.form-title-edit {
-  font-family: 'Libre Baskerville', serif;
-  padding: 10px 10px 10px 10px;
-  letter-spacing: 0.03em;
-  line-height: 200%;
-  font-size: 250%;
-}
-
-/* my outfits index */
-
-.outfit-index-title {
-  font-family: 'Libre Baskerville', serif;
-  letter-spacing: 0.03em;
-  line-height: 200%;
-  font-size: 250%;
-}
-a {
-  color: #c4aaff;
-
-  text-decoration: none !important;
-}
-
-.outfit-name {
-  font-family: 'Libre Baskerville', serif;
-  text-decoration: none;
-  font-variant: small-caps;
-  letter-spacing: 0.07em;
-  line-height: 0.04em;
-  padding-top: 10px;
-  font-size: 22px;
-}
-
-.outfit-tag {
-  font-family: 'Libre Baskerville', serif;
-  opacity: 0.65;
-  text-decoration: none;
-  letter-spacing: 0.07em;
-  line-height: 0.04em;
-  padding-top: 10px;
-  font-size: 12px;
-}
-
 .btn {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
@@ -205,39 +161,66 @@ a {
   text-decoration: none;
 }
 
-.brand-logo {
-  color: #ffffff;
-  text-shadow: 4px 4px 6px #000000;
-  font-size: 180px;
+.canvas img {
+  width: 50%;
 }
 
-.Hero-Text {
-  color: #ffffff;
-  /*font-family: 'Roboto', sans-serif;*/
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  text-shadow: 4px 4px 6px #000000;
+.img1 {
+  margin-bottom: 30px;
+}
+.placeholder {
+  min-width: 25vh;
+  max-height: 25%;
 }
 
-.background {
-  background-image: url('https://i.imgur.com/pjutwuA.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  text-align: center;
-  padding-top: 100px;
+.form-padding {
+  padding: 2% 1% 0% 0%;
 }
 
-.get-started {
-  color: #ffffff;
-  text-shadow: 4px 4px 6px #000000;
+.form-title {
+  font-family: "Libre Baskerville", serif;
+  padding: 10px 10px 10px 0px;
+  letter-spacing: 0.03em;
+  line-height: 200%;
 }
 
-.start {
-  text-transform: capitalize;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 4px 4px 6px #000000;
-  text-align: center;
-  margin: 0;
-  font-size: 30px;
+.form-title-edit {
+  font-family: "Libre Baskerville", serif;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+  font-size: 250%;
+}
+
+/* my outfits index */
+.outfit-index-title {
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.03em;
+  line-height: 200%;
+  font-size: 250%;
+}
+
+a {
+  color: #c4aaff;
+  text-decoration: none !important;
+}
+
+.outfit-name {
+  font-family: "Libre Baskerville", serif;
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.07em;
+  line-height: 0.04em;
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+.outfit-tag {
+  font-family: "Libre Baskerville", serif;
+  opacity: 0.65;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  line-height: 0.04em;
+  padding-top: 10px;
+  font-size: 12px;
 }
