@@ -33,13 +33,23 @@ body {
   line-height: 25px;
 }
 
-.brand-logo {
+.brand-logo-landing {
   font-family: "Libre Baskerville", serif;
   font-size: 36px !important;
   line-height: 110%;
   text-transform: none;
   font-weight: 900;
   margin-top: -80px;
+}
+
+/* MY CLOSET */
+.brand-logo {
+  color: #ffffff;
+  text-shadow: 4px 4px 6px #000000;
+  margin-left: 10px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-family: "Crimson Text", serif;
 }
 
 .nav {
@@ -54,7 +64,6 @@ body {
 .nav ul {
   font-size: 20px !important;
   font-weight: 400;
-  letter-spacing: 0.12em;
 }
 
 /* closet view start */
